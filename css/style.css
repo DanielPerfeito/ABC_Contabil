@@ -9,12 +9,165 @@
   flex-direction: column;
   height: 100vh;
 }
-.container .header, .container .footer {
-  background-color: aqua;
+.container .capa {
+  background-position: center;
+  background-size: cover;
+  border-bottom: solid 5px #004AAD;
+}
+.container .capa .filtro {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5019607843);
+}
+.container .capa .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.container .capa .header #logo {
+  width: 150px;
+}
+.container .capa .header .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 3px;
+}
+.container a {
+  text-align: center;
+  text-decoration: none;
+  border: solid 1px #004AAD;
+  border-radius: 4px;
+  padding: 5px;
+  transition: 0.2s;
+  font-family: arial;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #004AAD;
+  text-align: center;
+}
+.container a:hover {
+  background-color: #004AAD;
+  color: #ffffff;
+}
+.container main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 15px;
+}
+.container main h1 {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bolde;
+  color: #004AAD;
+  text-align: center;
+}
+.container main p {
+  font-family: "Cabin", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+.container .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: solid 5px #004AAD;
+}
+.container .footer .marca {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+  opacity: 0.5;
+}
+.container .footer .marca #copyright {
+  font-family: "Cabin", sans-serif;
+  font-size: 1rem;
+  font-weight: 0;
+  color: #004AAD;
+  text-align: center;
+}
+.container .footer .marca #sublogo {
+  height: 50px;
+}
+
+.home {
+  background-image: url(../assets/back-sobre.jpeg);
+}
+
+.apresentacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.apresentacao img {
+  width: 250px;
+}
+
+.orientacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.orientacao h2 {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #004AAD;
+  text-align: center;
+}
+.orientacao .estrategia {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background-image: linear-gradient(50deg, #004AAD 60%, #ffffff);
+  box-shadow: 1px 2px 3px;
+  border-radius: 15px;
+  height: 350px;
+  width: 260px;
+}
+.orientacao .estrategia .icones {
+  height: 100px;
+}
+.orientacao .estrategia h3 {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.2rem;
+  font-weight: none;
+  color: #ffffff;
+  text-align: center;
+}
+.orientacao .estrategia p, .orientacao .estrategia ul {
+  width: 90%;
+  font-family: "Cabin", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 0;
+  color: #ffffff;
+  text-align: center;
+}
+.orientacao .estrategia p li, .orientacao .estrategia ul li {
+  font-family: "Cabin", sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  list-style: none;
 }
 
 /*# sourceMappingURL=style.css.map */

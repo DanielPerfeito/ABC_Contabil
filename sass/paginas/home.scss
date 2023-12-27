@@ -1,0 +1,56 @@
+
+.home{
+    background-image: url(../assets/back-sobre.jpeg);
+
+}
+
+.apresentacao{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
+    img{
+        width: 250px;
+    }
+}
+
+.orientacao{
+    @include display-flex(flex, column, center, center, 10px);
+    
+
+
+    h2{
+        @include texto-padrao($fonte-principal, 1.5rem , bold, $cor-principal, center);
+    }
+
+    .estrategia{
+        @include display-flex(flex, column, space-evenly, center, 10px);
+        padding: 15px;
+        background-image: linear-gradient(50deg, $cor-principal 60%, $cor-clara);
+        box-shadow: 1px 2px 3px ;
+        border-radius: 15px;
+        height: 350px;
+        width: 260px;
+
+        .icones{
+            height: 100px;
+        }
+
+        h3{
+            @include texto-padrao($fonte-principal, 1.2rem, none, $cor-clara, center);
+        }
+
+        p, ul{
+    
+            width: 90%;
+            @include texto-padrao($fonte-principal, .9rem, 0, $cor-clara, center);
+
+            li{
+                @include texto-padrao($fonte-principal, .9rem, bold, $cor-clara, center);
+              list-style: none;
+            }
+        }
+    }
+}
