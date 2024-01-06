@@ -1,0 +1,45 @@
+
+.sobre{
+    background-image: url(../assets/back-sobre.jpeg);
+}
+
+.sobre-nos{
+    @include display-flex(flex, column, center, center, 0);
+
+    img{
+        width: 250px;
+        
+    }
+}
+
+.experiencia{
+    @include display-flex(flex, column, center, center, 30px);
+    width: 100vw;
+    background-image: url(../assets/back-experiencia.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 15px;
+
+
+    .motivos{
+        @include display-flex(flex, column, center, center, 10px);
+
+        .motivo{
+            @include display-flex(flex, column, center, center, 10px);
+            width: 190px;
+            height: 200px;
+            border-radius: 20px;
+            background-color: #ffffff9d;
+
+            img{
+                width: 80px;
+            }
+
+            p{
+                width: 80%;
+            }
+            
+        }
+    }
+}

@@ -1,30 +1,27 @@
 
 .home{
-    background-image: url(../assets/back-sobre.jpeg);
+    background-image: url(../assets/back-home.jpg);
 
 }
 
+#slogan{
+    @include texto-padrao($fonte-principal, 1.5rem, bold, $cor-principal , center);
+    
+
+ }
+
 .apresentacao{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
-
+    @include display-flex(flex, column, center, center, 10px);
+    padding: 15px;
     img{
         width: 250px;
     }
 }
 
 .orientacao{
-    @include display-flex(flex, column, center, center, 10px);
+    @include display-flex(flex, column, center, center, 15px);
+    padding: 15px;
     
-
-
-    h2{
-        @include texto-padrao($fonte-principal, 1.5rem , bold, $cor-principal, center);
-    }
-
     .estrategia{
         @include display-flex(flex, column, space-evenly, center, 10px);
         padding: 15px;
