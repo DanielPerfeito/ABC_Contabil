@@ -68,7 +68,7 @@
 }
 
 h1{
-    @include texto-padrao($fonte-principal, 1.8rem , bolde, $cor-principal, center);
+    @include texto-padrao($fonte-principal, 1.8rem , bold, $cor-principal, center);
 }
 
 h2{
