@@ -24,42 +24,41 @@
                         <a href="contato.html">Contato</a>
                     </nav>
                 </header>
+                <h1 id="titulo">Contato</h1>
             </div>
         </div>
 
         <main>
-            <h1 id="titulo">Contato</h1>
-            <section class="texto contato">
+            <section class="texto-contato">
+                <img src="../assets/contato-img01.png" alt="Ilustração de contato">
                 <p>Entre em contato conosco para obter mais informações ou agendar uma reunião para discutir suas necessidades contábeis. Nossa equipe está pronta para ajudá-lo.</p>
             </section>
             <section class="info-contato">
                 <h2>Informações de Contato</h2>
                 <address>
                     <ul>
-                        <li>Email: contato@escritorioabc.com</li>
-                        <li>Telefone: (11) 1234-5678</li>
-                        <li>Endereço: Rua das Flores, 123 - São Paulo/SP</li>
+                        <li><img src="../assets/icon-email.png" alt="icone">Email: contato@escritorioabc.com</li>
+                        <li><img src="../assets/icon-telefone .png" alt="icone">Telefone: (11) 1234-5678</li>
+                        <li><img src="../assets/icon-endereco.png" alt="icone">Endereço: Rua das Flores, 123 - São Paulo/SP</li>
+                        <li><img src="../assets/icon-calendario.png" alt="Icone">Atendimento: Segunda a Sexta-feira, das 8h às 18h.</li>
                     </ul>
                 </address>
             </section>
-            <section class="atendimento">
-                <h2>Horário de Atendimento</h2>
-                <p>Segunda a Sexta-feira, das 8h às 18h.</p>
-            </section>
+           
             <section class="mensagem">
                 <h2>Envie uma Mensagem</h2>
                 <form>
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui." required>
                     <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail aqui." required>
                     <label for="mensagem">Mensagem:</label>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="2" required></textarea>
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="3" placeholder="Digite uma mensagem aqui." required></textarea>
                     <button type="submit">Enviar Mensagem</button>
                 </form>
             </section>
         </main>
-
+        <hr>
         <footer class="footer">
             <div class="marca">
                 <img id="sublogo" src="../assets/logo.png" alt="Logo ABC Contábil">
