@@ -1,13 +1,10 @@
 
 .home{
     background-image: url(../assets/back-home.jpg);
-
 }
 
 #slogan{
     @include texto-padrao($fonte-principal, 1.5rem, bold, $cor-principal , center);
-    
-
  }
 
 .apresentacao{
@@ -16,11 +13,20 @@
     img{
         width: 250px;
     }
+
+    .texto-apresentacao{
+        @include display-flex(flex, column, center, center, 10px)
+    }
 }
 
 .orientacao{
     @include display-flex(flex, column, center, center, 15px);
     padding: 15px;
+    width: 100%;
+
+    .bloco-estrategia{
+        @include display-flex(flex, column, center, center, 15px);
+    }
     
     .estrategia{
         @include display-flex(flex, column, space-evenly, center, 10px);
@@ -30,6 +36,7 @@
         border-radius: 15px;
         height: 350px;
         width: 260px;
+        transition: .6s;
 
         .icones{
             height: 100px;
@@ -48,6 +55,47 @@
                 @include texto-padrao($fonte-principal, .9rem, bold, $cor-clara, center);
               list-style: none;
             }
+        }
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+@media screen and (min-width: 750px){
+
+    .apresentacao{
+        @include display-flex(flex, row, center, center, 10px);
+        padding: 25px 50px;
+        
+
+        img{
+            width: 45%;
+        }
+
+        .texto-apresentacao{
+            @include display-flex(flex, column, center, start, 10px);
+            padding: 20px;
+            width: 80%;
+            border-left: solid 5px $cor-principal;
+
+            p{
+                text-align: left;  
+            }
+        }
+    }
+
+    .orientacao{
+        @include display-flex(flex, column, center, center, 30px);
+        padding: 30px;
+        background-image: url(../assets/back-div-03.jpg);
+        background-size: cover;
+        background-position: center;
+
+        .bloco-estrategia{
+            @include display-flex(flex, row, center, center, 25px);
+            flex-wrap: wrap;
         }
     }
 }

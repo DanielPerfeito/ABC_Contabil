@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 
-@mixin texto-padrao($font-family, $font-size, $font-weigth, $color, $text-align){
+@mixin texto-padrao($font-family, $font-size, $font-weigth, $color, $text-align) {
     font-family: $font-family;
     font-size: $font-size;
     font-weight: $font-weigth;
@@ -13,7 +13,7 @@
     text-align: $text-align;
 }
 
-@mixin display-flex($display, $flex-direction, $justfy-content, $align-items, $gap){
+@mixin display-flex($display, $flex-direction, $justfy-content, $align-items, $gap) {
     display: $display;
     flex-direction: $flex-direction;
     justify-content: $justfy-content;
@@ -21,112 +21,147 @@
     gap: $gap;
 }
 
-.container{
+.container {
     height: 100vh;
-
     display: flex;
     flex-direction: column;
 
-
-    .capa{
+    .capa {
         background-position: center;
         background-size: cover;
         border-bottom: solid 5px $cor-principal;
-       
-    .filtro{
-        width: 100%;
-        height: 100%;
-        background-color: #ffffff94;
-        @include display-flex(flex, column, center, center, 10px);
-        padding: 15px;
 
-        .header{
+        .filtro {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff6c;
             @include display-flex(flex, column, center, center, 10px);
-        
-            
-    
-            #logo{
-                width: 150px;
-            
-            }
-    
-            .menu{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 0 3px;
-            }
+            padding: 15px;
 
-           
-    
+            .header {
+                @include display-flex(flex, column, center, center, 10px);
+                width: 100%;
+
+                #logo {
+                    width: 150px;
+                }
+
+                .menu {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0 3px;
+
+                    a {
+                        width: 25%;
+                    }
+                }
+            }
         }
-        
     }
 
-   
-
-}
-
-h1{
-    @include texto-padrao($fonte-principal, 1.8rem , bold, $cor-principal, center);
-}
-
-h2{
-    @include texto-padrao($fonte-principal, 1.5rem , bold, $cor-principal, center);
-    text-shadow: 3px 3px 5px $cor-clara;
-}
-
-p{
-    @include texto-padrao ($fonte-principal, 1rem, bold, $cor-escura, center);
-}
-
-a{
-    text-align: center;
-    text-decoration: none;
-    border: solid 1px $cor-principal;
-    border-radius: 4px;
-    padding: 5px;
-    transition: .2s;
-    @include texto-padrao (arial,.8rem, bold, $cor-principal, center);
-
-    &:hover{
-        background-color: $cor-principal;
-        color: $cor-clara;
-      
+    h1 {
+        @include texto-padrao($fonte-principal, 1.8rem, bold, $cor-principal, center);
     }
-    
-}
 
-main{
+    h2 {
+        @include texto-padrao($fonte-principal, 1.5rem, bold, $cor-principal, center);
+        text-shadow: 3px 3px 5px $cor-clara;
+    }
 
-    @include display-flex(flex, column, center, center, 20px);
-    flex: 1 0;
-
-
-
-    p{
+    p {
         @include texto-padrao ($fonte-principal, 1rem, bold, $cor-escura, center);
     }
-}
 
+    a {
+        text-align: center;
+        text-decoration: none;
+        border: solid 2px $cor-principal;
+        border-radius: 4px;
+        padding: 10px 5px;
+        transition: .2s;
+        @include texto-padrao (arial, .8rem, bold, $cor-principal, center);
+        @include display-flex(flex, column, center, center, 0);
 
-.footer{
-    @include display-flex(flex, row, space-evenly, center, 10px);
-    padding: 10px;
-    border-bottom: solid 5px $cor-principal;
-
-    .marca{
-        @include display-flex(flex, row, space-evenly, center, 5px);
-        opacity: .5;
-
-    #copyright{
-        @include texto-padrao($fonte-principal, 1rem, 0, $cor-principal , center)
+        &:hover {
+            background-color: $cor-principal;
+            color: $cor-clara;
+        }
     }
 
-    #sublogo{
-        height: 50px;
+    main {
+        @include display-flex(flex, column, center, center, 20px);
+        flex: 1 0;
+
+        p {
+            @include texto-padrao ($fonte-principal, 1rem, bold, $cor-escura, center);
+        }
+    }
+
+
+    .footer {
+        @include display-flex(flex, row, space-evenly, center, 10px);
+        padding: 10px;
+        border-bottom: solid 5px $cor-principal;
+
+        .marca {
+            @include display-flex(flex, row, space-evenly, center, 5px);
+            opacity: .5;
+
+            #copyright {
+                @include texto-padrao($fonte-principal, 1rem, 0, $cor-principal , center)
+            }
+
+            #sublogo {
+                height: 50px;
+            }
+        }
     }
 }
 
-}
+@media screen and (min-width: 750px) {
+
+    .container {
+
+        .capa {
+            border: none;
+
+            .filtro {
+                padding: 15px 15px 0 0;
+
+                .header {
+                    @include display-flex(flex, row, space-around, center, 10px);
+
+                    #logo {
+                        width: 125px;
+                    }
+
+                    .menu {
+                        width: 50%;
+                        border-bottom: solid 3px $cor-principal;
+                        background-color: #ffffff9c;
+                        border-radius: 10px 10px 0 0;
+
+                        a {
+                            width: 25%;
+                            border: none;
+                            font-size: 1rem;
+                            padding: 5px 0 3px;
+                            border-radius: 10px 10px 0 0;
+                        }
+                    }
+                }
+
+                h1,
+                #slogan {
+                    @include texto-padrao($fonte-principal, 2rem, bold, $cor-principal, left);
+                    padding: 20px;
+                    margin-top: 25px;
+                    background-color: #ffffff9c;
+                    border-radius: 25px 25px 0 0;
+                }
+            }
+        }
+    }
 }

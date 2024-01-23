@@ -18,7 +18,7 @@
 .container .capa .filtro {
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5803921569);
+  background-color: rgba(255, 255, 255, 0.4235294118);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,15 +32,20 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  width: 100%;
 }
 .container .capa .filtro .header #logo {
   width: 150px;
 }
 .container .capa .filtro .header .menu {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0 3px;
+}
+.container .capa .filtro .header .menu a {
+  width: 25%;
 }
 .container h1 {
   font-family: "Cabin", sans-serif;
@@ -67,15 +72,20 @@
 .container a {
   text-align: center;
   text-decoration: none;
-  border: solid 1px #004AAD;
+  border: solid 2px #004AAD;
   border-radius: 4px;
-  padding: 5px;
+  padding: 10px 5px;
   transition: 0.2s;
   font-family: arial;
   font-size: 0.8rem;
   font-weight: bold;
   color: #004AAD;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
 }
 .container a:hover {
   background-color: #004AAD;
@@ -124,6 +134,49 @@
   height: 50px;
 }
 
+@media screen and (min-width: 750px) {
+  .container .capa {
+    border: none;
+  }
+  .container .capa .filtro {
+    padding: 15px 15px 0 0;
+  }
+  .container .capa .filtro .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+  }
+  .container .capa .filtro .header #logo {
+    width: 125px;
+  }
+  .container .capa .filtro .header .menu {
+    width: 50%;
+    border-bottom: solid 3px #004AAD;
+    background-color: rgba(255, 255, 255, 0.6117647059);
+    border-radius: 10px 10px 0 0;
+  }
+  .container .capa .filtro .header .menu a {
+    width: 25%;
+    border: none;
+    font-size: 1rem;
+    padding: 5px 0 3px;
+    border-radius: 10px 10px 0 0;
+  }
+  .container .capa .filtro h1,
+  .container .capa .filtro #slogan {
+    font-family: "Cabin", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #004AAD;
+    text-align: left;
+    padding: 20px;
+    margin-top: 25px;
+    background-color: rgba(255, 255, 255, 0.6117647059);
+    border-radius: 25px 25px 0 0;
+  }
+}
 .home {
   background-image: url(../assets/back-home.jpg);
 }
@@ -147,6 +200,13 @@
 .apresentacao img {
   width: 250px;
 }
+.apresentacao .texto-apresentacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 
 .orientacao {
   display: flex;
@@ -155,6 +215,14 @@
   align-items: center;
   gap: 15px;
   padding: 15px;
+  width: 100%;
+}
+.orientacao .bloco-estrategia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 .orientacao .estrategia {
   display: flex;
@@ -168,6 +236,7 @@
   border-radius: 15px;
   height: 350px;
   width: 260px;
+  transition: 0.6s;
 }
 .orientacao .estrategia .icones {
   height: 100px;
@@ -195,7 +264,55 @@
   text-align: center;
   list-style: none;
 }
+.orientacao .estrategia:hover {
+  transform: scale(1.1);
+}
 
+@media screen and (min-width: 750px) {
+  .apresentacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 25px 50px;
+  }
+  .apresentacao img {
+    width: 45%;
+  }
+  .apresentacao .texto-apresentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    padding: 20px;
+    width: 80%;
+    border-left: solid 5px #004AAD;
+  }
+  .apresentacao .texto-apresentacao p {
+    text-align: left;
+  }
+  .orientacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    background-image: url(../assets/back-div-03.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .orientacao .bloco-estrategia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+}
 .sobre {
   background-image: url(../assets/back-sobre.jpg);
 }
