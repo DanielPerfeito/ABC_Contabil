@@ -71,13 +71,13 @@
         
 
         img{
-            width: 45%;
+            width: 30%;
         }
 
         .texto-apresentacao{
             @include display-flex(flex, column, center, start, 10px);
             padding: 20px;
-            width: 80%;
+            width: 65%;
             border-left: solid 5px $cor-principal;
 
             p{

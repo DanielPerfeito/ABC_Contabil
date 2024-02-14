@@ -55,6 +55,10 @@
 
                     a {
                         width: 25%;
+                        background-color: #ffffff9c;
+                        &:hover{
+                            background-color: $cor-principal;
+                        }
                     }
                 }
             }
@@ -149,6 +153,7 @@
                             font-size: 1rem;
                             padding: 5px 0 3px;
                             border-radius: 10px 10px 0 0;
+                            background-color: #ffffff00;
                         }
                     }
                 }

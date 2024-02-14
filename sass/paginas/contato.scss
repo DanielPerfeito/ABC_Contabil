@@ -4,6 +4,7 @@
 
 .texto-contato{
     padding:  0 15px;
+    width: 90%;
 
     @include display-flex(flex, column, center, center, 0);
     
@@ -89,5 +90,40 @@
 
            }
         }
+    }
+}
+
+@media screen and (min-width:700px){
+
+
+
+    .texto-contato{
+        @include display-flex(flex, row, center, center, 0);
+        padding: 20px 50px;
+        border-bottom: solid 5px $cor-principal;
+        border-radius: 15px;
+        width: 80%;
+
+    
+        
+
+        img{
+            width: 30%;
+            padding: 15px;
+            background-color: $cor-clara;
+            border-radius: 15px;
+        }
+
+        p{
+            background-color: $cor-clara;
+            width: 600px; 
+            padding: 20px;
+           border-radius: 15px;
+           box-shadow: 2px 2px 15px $cor-principal;
+        }
+    }
+
+    form{
+        width: 500px;
     }
 }

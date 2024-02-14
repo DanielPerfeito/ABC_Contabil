@@ -11,11 +11,6 @@ Um site para um escritório de contabilidade, ABC contábil (empresa fictícia).
 
 
 
-
-
-
-
-
 ## Licença
 
 **[MIT](https://choosealicense.com/licenses/mit/)** 📄✔️
@@ -23,7 +18,7 @@ Um site para um escritório de contabilidade, ABC contábil (empresa fictícia).
 
 ## Status
 
-**Em andamento** ☑️
+**Concluído** ✅
 ## Links
 
 **Link do projeto:** https://danielperfeito.github.io/ABC_Contabil/ 🌐
