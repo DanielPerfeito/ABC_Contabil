@@ -344,10 +344,11 @@
 }
 .experiencia .motivos {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .experiencia .motivos .motivo {
   display: flex;
@@ -390,14 +391,6 @@
     align-items: center;
     gap: 10px;
     max-width: 800px;
-  }
-  .experiencia .motivos {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
   }
 }
 .servicos {
@@ -455,6 +448,49 @@
   box-shadow: inset 1px 1px 5px;
 }
 
+@media screen and (min-width: 750px) {
+  .texto-servico {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 25px 50px;
+  }
+  .texto-servico img {
+    width: 45%;
+  }
+  .texto-servico #texto {
+    text-align: right;
+    border-right: solid 5px #004AAD;
+    padding: 15px 15px 15px 0;
+    max-width: 700px;
+  }
+  .nossos-servicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .nossos-servicos ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .nossos-servicos .mais-servicos {
+    gap: 20px;
+  }
+  .nossos-servicos .mais-servicos p {
+    width: 700px;
+    gap: 50px;
+  }
+  .nossos-servicos .mais-servicos a {
+    padding: 8px 20px;
+  }
+}
 .contato {
   background-image: url(../assets/back-contato.jpg);
 }

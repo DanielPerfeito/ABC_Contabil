@@ -23,7 +23,8 @@
 
 
     .motivos{
-        @include display-flex(flex, column, center, center, 10px);
+        @include display-flex(flex, row, center, center, 10px);
+        flex-wrap: wrap;
 
         .motivo{
             @include display-flex(flex, column, center, center, 10px);
@@ -65,16 +66,5 @@
             
         }
     }
-
-    .experiencia{
-        
-        .motivos{
-            @include display-flex(flex, row, center, center, 10px);
-            flex-wrap: wrap;
-
-        }
-    
-    }
-
 
 }

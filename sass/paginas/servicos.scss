@@ -3,12 +3,10 @@
     background-image: url(../assets/back-serviços.jpg);
 }
 
-
 .texto-servico{
 
     @include display-flex(flex, column, center, center, 0);
     padding: 15px;
-
 
     img{
         width: 180px;
@@ -43,7 +41,48 @@
         padding: 15px;
         border-radius: 15px;
         box-shadow: inset 1px 1px 5px;
-
     }
     
+}
+
+@media screen and (min-width: 750px){
+
+    .texto-servico{
+
+        @include display-flex(flex, row-reverse, center, center, 0);
+        padding: 25px 50px;
+
+        img{
+            width: 45%;
+        }
+
+        #texto{
+            text-align: right;
+            border-right: solid 5px $cor-principal; 
+            padding: 15px 15px 15px 0;
+            max-width: 700px;
+        }
+    }
+
+    .nossos-servicos{
+        @include display-flex(flex, column, center, center, 50px);
+
+        ul{
+            @include display-flex(flex, column, center, center, 5px);
+        }
+
+        .mais-servicos{
+
+            gap: 20px;
+
+            p{
+                width: 700px;
+                gap: 50px;
+            }
+
+            a{
+                padding: 8px 20px;
+            }
+        }
+    }
 }
