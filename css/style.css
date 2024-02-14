@@ -265,7 +265,7 @@
   list-style: none;
 }
 .orientacao .estrategia:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 750px) {
@@ -359,6 +359,7 @@
   height: 200px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.6156862745);
+  transition: 0.4s;
 }
 .experiencia .motivos .motivo img {
   width: 80px;
@@ -366,7 +367,39 @@
 .experiencia .motivos .motivo p {
   width: 80%;
 }
+.experiencia .motivos .motivo:hover {
+  background-color: #ffffff;
+}
 
+@media screen and (min-width: 750px) {
+  .sobre-nos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 25px 50px;
+  }
+  .sobre-nos img {
+    width: 45%;
+  }
+  .sobre-nos .texto-sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 800px;
+  }
+  .experiencia .motivos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
 .servicos {
   background-image: url(../assets/back-serviços.jpg);
 }

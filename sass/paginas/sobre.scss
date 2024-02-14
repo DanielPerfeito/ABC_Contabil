@@ -31,6 +31,7 @@
             height: 200px;
             border-radius: 20px;
             background-color: #ffffff9d;
+            transition: .4s;
 
             img{
                 width: 80px;
@@ -39,7 +40,41 @@
             p{
                 width: 80%;
             }
+
+            &:hover{
+                background-color: $cor-clara;
+        
+            }
             
         }
     }
+}
+
+@media screen and (min-width: 750px){
+
+    .sobre-nos{
+        @include display-flex(flex, row, center, center, 10px);
+        padding: 25px 50px;
+        img{
+            width: 45%;
+        }
+
+        .texto-sobre{
+            @include display-flex(flex, column, center, center, 10px);
+            max-width: 800px;
+            
+        }
+    }
+
+    .experiencia{
+        
+        .motivos{
+            @include display-flex(flex, row, center, center, 10px);
+            flex-wrap: wrap;
+
+        }
+    
+    }
+
+
 }

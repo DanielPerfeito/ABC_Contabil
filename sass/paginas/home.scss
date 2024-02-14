@@ -58,7 +58,7 @@
         }
 
         &:hover{
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
     }
 }
@@ -83,6 +83,8 @@
             p{
                 text-align: left;  
             }
+
+           
         }
     }
 
@@ -96,6 +98,7 @@
         .bloco-estrategia{
             @include display-flex(flex, row, center, center, 25px);
             flex-wrap: wrap;
+           
         }
     }
 }
